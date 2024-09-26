@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>HTML Form</title>
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container border mt-5 mb-5">
+        <div class="row border bg-light">
+            <div class="col-12 pt-2 pb-2 pl-3">
+                <h3>Payment form example</h>
+            </div>
+        </div>
+        <div class="row border px-3 py-4">
+            <div class="col-12 alert alert-danger" role="alert">
+                Some fields are missing
+            </div>
+            <form class="w-100">
+                 <fieldset>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="card-number">Card #</label>
+                            <input type="number" id="card-number" placeholder="XXXXXXXXXXXXXXXX" maxlength="19" class="form-control">
+                        </div>
+                        <div class="col-3 form-group">
+                            <label for="cvc">CVC #</label>
+                            <input type="number" id="cvc" placeholder="0000" class="form-control">
+                        </div>
+                        <div class="col-3 form-group">
+                            <label for="amount">Amount</label>
+                            <div class="input-group">
+                                <strong>$</strong>
+                                <input type="number" id="amount" placeholder="Amount" class="form-control">
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" class="form-control">
+                        </div>
+                        <div class="col-6 form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" class="form-control">
+                        </div>
+                    </div>    
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" class="form-control">
+                        </div>
+                        <div class="col-3 form-group">
+                            <label for="state">State</label>
+                            <select id="state" class="form-control">
+                                <option value="" disabled selected>Pick a state</option>
+                                <option value="florida">Florida</option>
+                                <option value="texas">Texas</option>
+                                <option value="arizona">Arizona</option>
+                                <option value="minnesota">Minnesota</option>
+                                <option value="alaska">Alaska</option>
+                            </select>
+                        </div>
+                        <div class="col-3 form-group">
+                            <label for="postal-code">Postal Code</label>
+                            <input type="number" id="postal-code" class="form-control">
+                        </div>    
+                    </div>
+                    <div class="row">
+                        <div class="col-6 form-group">
+                            <label for="input-card-type-group">We accept:</label>
+                            <div class="col-7 input-card-type-group bg-secondary border rounded pt-2 pl-2 d-flex">
+                                <div class="col-3 card-container-first test-center">
+                                    <input type="radio" id="card-type-first" name="card-type">
+                                    <label for="card-type-first">
+                                        <i class="fa-brands fa-cc-mastercard" style="color: white;"></i>
+                                    </label>
+                                </div>
+                                <div class="col-3 card-container-second text-center">
+                                    <input type="radio" id="card-type-second" name="card-type">
+                                    <label for="card-type-second">
+                                        <i class="fa-brands fa-cc-visa" style="color: white;"></i>
+                                    </label>
+                                </div>
+                                <div class="col-3 card-container-third text-center">
+                                    <input type="radio" id="card-type-third" name="card-type">
+                                    <label for="card-type-third">
+                                        <i class="fa-brands fa-cc-diners-club" style="color: white;"></i>
+                                    </label>
+                                </div>
+                                <div class="col-3 card-container-fourth text-center">
+                                    <input type="radio" id="card-type-fourth" name="card-type">
+                                    <label for="card-type-fourth">
+                                        <i class="fa-brands fa-cc-amex" style="color: white"></i>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="4" class="form-control"></textarea>
+                            <small class="text-muted">Add any notes here.</small>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="row border bg-light">
+            <div class="col-12 d-flex justify-content-end pt-2 pb-2 pr-3">
+                <button type="button" class="btn btn-secondary">Cancel</button>
+                <button type="button" class="btn btn-primary ml-2">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
